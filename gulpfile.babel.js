@@ -166,7 +166,6 @@ gulp.task('default', ['clean'], () => {
   gulp.start('build');
 });
 
-var gulp = require('gulp');
 var ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function() {

@@ -30,12 +30,49 @@
     <div class="great-vertical-center">
       <div class="great-container">
         <div class="great-text">
-          <span>Make Mexico Great</span> <span id="greatness"></span>
+          <span>Make Mexico</span> 
+          <div>Great <div id="greatness"></div></div>
         </div>
         <div onclick="GetGreatness();" class="great-button">Make It So</div>
       </div>
     </div>
 
+    <script>
+      function GetGreatness() {
+        var synonyms = new Array(
+          'Again',
+          'Also',
+          'Further',
+          'Likewise',
+          'More',
+          'Still',
+          'Too',
+          'Besides',
+          'Additionally',
+          'Along',
+          'Along With',
+          'And',
+          'As Well',
+          'As Well As',
+          'Conjointly',
+          'Furthermore',
+          'In Conjunction With',
+          'In Like Manner',
+          'Including',
+          'More Than That',
+          'Moreover',
+          'On Top Of',
+          'Over And Above',
+          'Plus',
+          'To Boot',
+          'Together With',
+          'Withal'
+        );
+        var greatUno = synonyms[Math.floor(Math.random() * synonyms.length)];
+        var greatDos = synonyms[Math.floor(Math.random() * synonyms.length)];
+        document.getElementById('greatness').innerHTML= greatUno + ' ' + greatDos;
+      };
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -46,8 +83,5 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
   </body>
 </html>
